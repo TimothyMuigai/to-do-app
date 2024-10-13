@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+:root{
+    --input-color:#ffffff;
+    --base-color:linear-gradient(180deg,#12349e,#384877);
+}
+.container{
+    background: var(--base-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    border: 2px solid;
+    margin: 70px auto;
+    width: 50%;
+    gap: 10px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.heading img{
+    width: 3.5rem;
+}
+h1{
+    color: rgb(112, 255, 255);
+    font-weight: 800;
+    font: inherit;
+    font-size: 2.5em;
+}
+
+p{
+    color: rgb(230, 42, 42);
+    font: inherit;
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+
+.addList{
+    display: flex;
+    background-color: #ffffff;    
+    border-radius: 50px;
+}
+#taskTxt{
+    border-radius: 50px;
+    border-style: none;
+    padding: 10px 30px;
+    color: #12349e;
+    background-color: transparent;
+    font: inherit;  
+    width: 100%;  
+}
+button{
+    border-radius: 50px;
+    background-color: rgba(78, 97, 97, 0.642);
+    border-style: none;
+    padding: 0 20px;
+    color: #110d10;
+    font: inherit;
+    font-weight: 550;
+}
+button:hover{
+    color: #d7d3d3;
+    background-color: rgb(54, 60, 60);
+}
+.taskitems{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 20px;
+    background-color: #ffffff; 
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+li{
+    
+    width:fit-content;
+    max-width: 80%;
+    word-wrap: break-word;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    background-color: #f0ecec;   
+}
+.delete{
+    position: absolute;
+    right: -30px;
+    top: 1px;
+    bottom: px;
+    padding: 1px;   
+}
+.delete img:hover{
+    background-color: rgba(255, 99, 71, 0.395);
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+.ischecked{
+    position: absolute;
+    left:  -30px;
+    top: 1px;
+    bottom: px;
+    padding: 1px;   
+}
+.ischecked img:hover{
+    background-color: #d7d3d3;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
