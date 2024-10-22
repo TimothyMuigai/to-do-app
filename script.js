@@ -32,14 +32,7 @@ function addTask(){
 
         ischeck.addEventListener('click', () => {
             check(ischeck, showText);
-           
         });
-        
-        // This is wrong bcoz it doesn't wait for the button to be 
-        // clicked
-        /*
-            ischeck.addEventListener('click', check(ischeck, showText));
-        */
         deleteTask.addEventListener("click", () => {
             taskDelete(li);            
         });
@@ -63,34 +56,13 @@ function taskDelete(li){
         displayItems.removeChild(li); 
         saveData();  
 }
-/* 
-from here i did by myself but used gpt to make it better. Below is what i did:
-
-    function saveData(){ 
-        localStorage.setItem("data",displayItems.innerHTML);
-    }
-
-    function showData(){ 
-    displayItems.innerHTML= localStorage.setItem("data"); 
-    }
-    showData();
-
---1.This was not efficient bcoz it saves the whole html markup thus taking much space. 
---2.Also making it prone to cross site scripting.
---3.When i save and restore using innerHtml the event listeners are not loaded back up thus i have 
-  to manually add them again.
---4.This approach is less flexible bcoz i was planning on adding filter, sorting and due dates but saving
-  the data with innerhtml would make it not easy to do so since i would have parse the html inorder to
-  extract the data back
-
-*/
 
 function escapeHTML(text) {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(text));
     return div.innerHTML;
 }
-// this is what no 4 means. i would do this code in the showData
+
 function saveData() {
     const tasks = Array.from(displayItems.children).map(li => {
         return {
@@ -148,6 +120,4 @@ function showData() {
         });
     }
 }
-
-
 showData();
